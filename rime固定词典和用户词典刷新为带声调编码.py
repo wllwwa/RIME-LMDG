@@ -144,7 +144,15 @@ def process_single_file(src: str, dst: str):
 
             cols = line.split('\t')
             newline = userdb_line(cols) if userdb and len(cols) >= 3 else normal_line(cols)
-            d.write(newline.rstrip('\t') + '\n')
+
+            # ─── 如果是 userdb 行且首列没空格，就补 1 个空格 ───
+            if userdb:
+                seg, *rest = newline.split('\t', 1)
+                if not seg.endswith(' '):
+                    seg += ' '
+                    newline = '\t'.join([seg] + rest)
+
+            d.write(newline + '\n')  
 
 
 # ─────────────────────────────────────────────────────────
@@ -191,8 +199,8 @@ def process_files(path_in: str, path_out: str):
 # ─────────────────────────────────────────────────────────
 if __name__ == "__main__":
     #输入输出可以为目录或者单文件
-    input_dir  = "/home/amz/Documents/输入法方案/原始词库"
-    output_dir = "/home/amz/Documents/输入法方案/万象拼音基础版/cn_dicts"
+    input_dir  = "/home/amz/Documents/RimeSync/deepin/zc.userdb.txt"
+    output_dir = "/home/amz/Documents/RimeSync/deepin/11zc.userdb.txt"
     custom_dir = "pinyin_data"
 
     load_custom_pinyin_from_directory(custom_dir)

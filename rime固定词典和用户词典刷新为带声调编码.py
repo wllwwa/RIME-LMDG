@@ -199,8 +199,8 @@ def process_files(path_in: str, path_out: str):
 # ─────────────────────────────────────────────────────────
 if __name__ == "__main__":
     #输入输出可以为目录或者单文件
-    input_dir  = "/home/amz/Documents/RimeSync/deepin/zc.userdb.txt"
-    output_dir = "/home/amz/Documents/RimeSync/deepin/11zc.userdb.txt"
+    input_dir  = "/home/amz/Documents/输入法方案/原始词库"
+    output_dir = "/home/amz/Documents/输入法方案/万象拼音基础版/cn_dicts"
     custom_dir = "pinyin_data"
 
     load_custom_pinyin_from_directory(custom_dir)

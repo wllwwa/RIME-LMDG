@@ -22,7 +22,7 @@
 
  示例项目：
 
-  [万象拼音增强版-多维直接辅助码与任意拼音方案的组合](https://github.com/amzxyz/rime_wanxiang_pro)  |  [万象拼音基础版-全拼双拼间接辅助码版本](https://github.com/amzxyz/rime_wanxiang)   
+  [万象拼音增强版-全拼双拼-多维直接/间接辅助码-声调辅助](https://github.com/amzxyz/rime_wanxiang_pro)  |  [万象拼音基础版-全拼双拼-声调辅助-反查辅助](https://github.com/amzxyz/rime_wanxiang)   
 
 | 词库类型 | 文件名称     | 描述                   |
 |----------|--------------|------------------------|
@@ -32,7 +32,6 @@
 | 联想词库 | `associational.dict` | 包含5字以上词组,当输入四个字之后形成联想候选|
 | 兼容词库 | `compatible.dict` | 包含多音字词组,用于兼容词组的多种读音场景|
 | 错音错字 | `corrections.dict` | 错音错字词组 ,用于兼容经常使用但是实际上在字、音是错的场景|
-| 全字表 | `full.dict` | 包含CJK所有有字，汉字大全|
 
 
 ### 模型使用方法：
